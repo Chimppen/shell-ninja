@@ -44,6 +44,11 @@
         })
     }
 
+  function checkAnswer(user_answer, anticipated_answer, callback) {
+    if (_.toLower(user_answer) === _.toLower(anticipated_answer)) {
+      callback(user_answer);
+    }
+  }
 
     onMount(()=>{
         let shell  = new Bash(el,{
