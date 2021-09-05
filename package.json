@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@anas2479/bash-mirror": "^2.2.4",
+    "lodash": "^4.17.21",
     "sirv-cli": "^1.0.0"
   }
 }
