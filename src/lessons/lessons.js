@@ -2,6 +2,7 @@ const Ls_command = require("./ls-command");
 const Cd_command = require('./cdCommand');
 const Mkdir_command = require("./Mkdir-command");
 const Rmdir_command = require("./Rmdir-command");
+const Touch = require("./touch-command");
 
 module.exports = [
     {
@@ -26,5 +27,11 @@ module.exports = [
         title: "RMDIR Command",
         description: `Learn how to remove folders using the rmdir command.`,
         lesson: Rmdir_command
+    },
+
+    {
+        title: `Touch Command`,
+        description: `Learn how to create files using the Touch command.`,
+        lesson: Touch
     }
 ]
