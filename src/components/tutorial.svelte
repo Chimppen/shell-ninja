@@ -80,7 +80,7 @@
     <h1 class="text-2xl font-bold text-gray-800">Choose a lesson.</h1>
     <p class="text-gray-600"> Choose from a list of curated interactive lessons.</p>
   </div>
-  <div class="relative p-10 grid gap-2 grid-flow-row md:grid-cols-3 lg:grid-cols-4 grid-cols-2 ">
+  <div class="relative p-10 grid gap-x-2 gap-y-4 grid-flow-row md:grid-cols-3 lg:grid-cols-4 grid-cols-2 ">
     {#each lessons as theLesson}
     
       <LessonLink
