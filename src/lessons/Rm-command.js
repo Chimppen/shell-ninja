@@ -2,6 +2,7 @@
 const Lesson = require('./Lesson')
 const _ = require('lodash')
 const checkAnswer = require('../utilities/checkAnswer')
+const End = require('./End')
 
 module.exports = class Rm_command  extends Lesson{
     constructor(title, description, shell){
@@ -19,6 +20,10 @@ module.exports = class Rm_command  extends Lesson{
 
                 title.innerHTML = `Awesome! The file "${_.slice(userRes, 1,1000)}" was removed from the current folder.`
 
+                shell.input('End? y/n', (end)=>{
+                    shell.clear()
+                    new End(title, description, shell)
+                })
             })
         })
     }
