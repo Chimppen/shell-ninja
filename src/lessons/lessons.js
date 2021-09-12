@@ -1,5 +1,6 @@
 const Ls_command = require("./ls-command");
-const Cd_command = require('./cdCommand')
+const Cd_command = require('./cdCommand');
+const Mkdir_command = require("./Mkdir-command");
 
 module.exports = [
     {
@@ -12,5 +13,11 @@ module.exports = [
         title:`CD command.`,
         description:`Learn how to navigate a file system with the CD command.`,
         lesson: Cd_command
+    },
+
+    {
+        title: 'MKDIR Command',
+        description: `Learn how to create folders using the MKDIR command.`,
+        lesson: Mkdir_command
     }
 ]
