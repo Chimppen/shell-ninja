@@ -1,6 +1,7 @@
 const checkAnswer = require('../utilities/checkAnswer')
 const _ = require('lodash')
 const Lesson = require('./Lesson')
+const Mkdir_command = require('./Mkdir-command')
 
 
 
@@ -34,6 +35,11 @@ module.exports = class Cd_command extends Lesson{
 
                                 title.innerHTML = `Awesome! Notice how the path wen't from <span class="text-gray-600">root/${folder}</span> to <span class="text-gray-600">root/</span>.`
 
+                                shell.input(`Next lesson? y/n`, (nextLesson)=>{
+                                    checkAnswer(nextLesson, 'y', ()=>{
+                                        new Mkdir_command(title, description, shell)
+                                    })
+                                })
                             })
                         })
                     })
