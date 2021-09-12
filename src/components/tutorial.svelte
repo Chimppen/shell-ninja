@@ -8,10 +8,24 @@
 
 
   
+  let tutorial_menu_visible = "opacity-0 translate-y-2 pointer-events-none";
 
+  function view_tutorial_menu() {
+    if (
+      tutorial_menu_visible === "opacity-0 translate-y-2 pointer-events-none"
+    ) {
+      tutorial_menu_visible = "opacity-full translate-y-0 pointer-events-auto";
+    } else {
+      tutorial_menu_visible = "opacity-0 translate-y-2 pointer-events-none";
+    }
   }
 
+
+
   let lesson = Intro
+
+  function getLesson(event) {
+    lesson = event.detail.name;
   }
 
   let el;
@@ -52,6 +66,39 @@
   }
   newLesson(lesson)
 </script>
+
+<!--Tutorial Menu-->
+<div
+  class="{tutorial_menu_visible} absolute transition-all duration-100 transform translate-y-2 bg-white w-full min-h-full z-40">
+  <div class="flex justify-between items-center p-10 w-full">
+    <div/>
+    <div>
+      <button on:click={view_tutorial_menu}><img src="/close.svg" alt="close" class="w-[35px]"></button>
+    </div>
+  </div>
+  <div class="px-10">
+    <h1 class="text-2xl font-bold text-gray-800">Choose a lesson.</h1>
+    <p class="text-gray-600"> Choose from a list of curated interactive lessons.</p>
+  </div>
+  <div class="relative p-10 grid gap-2 grid-flow-row md:grid-cols-3 lg:grid-cols-4 grid-cols-2 ">
+    {#each lessons as theLesson}
+    
+      <LessonLink
+        title={theLesson.title}
+        description={theLesson.description}
+        lesson={theLesson.lesson}
+        on:lesson={(event) => {
+          getLesson(event);
+          view_tutorial_menu();
+          newLesson(lesson);
+        }}>
+        {#if theLesson.lesson === lesson}
+        <div class="w-full bg-blue-600 h-2"></div>
+      {/if}
+      </LessonLink>
+    {/each}
+  </div>
+</div>
 
 <div class="absolute flex justify-between items-center px-10 py-5 w-full ">
   <div>
