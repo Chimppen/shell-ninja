@@ -1,6 +1,7 @@
 const Lesson = require("./Lesson");
 const _  = require('lodash');
 const checkAnswer = require("../utilities/checkAnswer");
+const Rm_command = require("./Rm-command");
 
 
 module.exports = class Touch extends Lesson{
@@ -16,6 +17,12 @@ module.exports = class Touch extends Lesson{
                 shell.runCommand('touch', _.slice(userResponce,1,1000))
 
                 title.innerHTML = `Awesome! A file named "${ _.slice(userResponce,1,1000)}" was created.`
+
+                shell.input(`Next lesson? y/n`, (next)=>{
+                    checkAnswer(next, 'y', ()=>{
+                        new Rm_command(title, description, shell)
+                    })
+                })
             })
         })
     }
