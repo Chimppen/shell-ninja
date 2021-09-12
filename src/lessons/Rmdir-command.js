@@ -2,6 +2,7 @@
 const checkAnswer = require('../utilities/checkAnswer')
 const _ =  require('lodash')
 const Lesson = require('./Lesson')
+const Touch = require('./touch-command')
 
 module.exports = class Rmdir_command extends Lesson{
     constructor(title, description, shell){
@@ -18,6 +19,11 @@ module.exports = class Rmdir_command extends Lesson{
 
                 title.innerHTML = `Greate! The folder "<span class="text-gray-600">${_.slice(userResponce,1,1000)}</span>" was removed.`
                 
+                shell.input(`Next lesson? y/n`, (next)=>{
+                    checkAnswer(next,'y', ()=>{
+                        new Touch(title, description, shell)
+                    })
+                })
             })
         })
     }
