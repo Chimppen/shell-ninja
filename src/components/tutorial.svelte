@@ -53,6 +53,17 @@
   newLesson(lesson)
 </script>
 
+<div class="absolute flex justify-between items-center px-10 py-5 w-full ">
+  <div>
+    <img src="/logo.svg" alt="" class="max-w-[150px]" />
+  </div>
+  <div>
+    <button on:click={view_tutorial_menu} class="px-5 py-3 bg-gray-600 hover:bg-gray-700 text-gray-50 font-bold rounded-lg">
+      <img class="inline" src="/lessons.svg" alt="lesson collection">
+      Lessons
+    </button>
+  </div>
+</div>
 <div class="flex flex-col md:flex-row flex-wrap min-h-screen">
   <div class=" flex items-center flex-1 min-h-full bg-gray-50">
       <div class="content p-10 max-w-[600px]">
