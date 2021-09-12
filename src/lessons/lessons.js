@@ -1,6 +1,7 @@
 const Ls_command = require("./ls-command");
 const Cd_command = require('./cdCommand');
 const Mkdir_command = require("./Mkdir-command");
+const Rmdir_command = require("./Rmdir-command");
 
 module.exports = [
     {
@@ -19,5 +20,11 @@ module.exports = [
         title: 'MKDIR Command',
         description: `Learn how to create folders using the MKDIR command.`,
         lesson: Mkdir_command
+    },
+
+    {
+        title: "RMDIR Command",
+        description: `Learn how to remove folders using the rmdir command.`,
+        lesson: Rmdir_command
     }
 ]
