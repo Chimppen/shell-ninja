@@ -1,7 +1,4 @@
 <script>
-  import { onMount } from "svelte";
-  import { fade, fly } from "svelte/transition";
-  import _ from "lodash";
   import { Bash } from "@anas2479/bash-mirror";
 
   let el;
