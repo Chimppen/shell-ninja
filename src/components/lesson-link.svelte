@@ -10,6 +10,7 @@
   function returnLesson() {
     dispatch("lesson", {
       name: lesson,
+      current_lesson: title
     });
   }
 </script>

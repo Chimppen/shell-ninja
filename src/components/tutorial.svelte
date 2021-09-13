@@ -2,6 +2,7 @@
   import { Bash } from "@anas2479/bash-mirror";
   import lessons from "../lessons/lessons";
   import LessonLink from "./lesson-link.svelte";
+  import _ from 'lodash'
 
   import Intro from "../lessons/Intro";
 
@@ -23,9 +24,19 @@
 
 
   let lesson = Intro
+  let currentLesson 
+
+  if (localStorage.getItem('current_lesson') != undefined) {
+    currentLesson = localStorage.getItem('current_lesson')
+    lesson = _.find(lessons,{title: currentLesson}).lesson
+  
+  }
 
   function getLesson(event) {
     lesson = event.detail.name;
+    localStorage.setItem('current_lesson', event.detail.current_lesson)
+    currentLesson = localStorage.getItem('current_lesson')
+    
   }
 
   let el;
@@ -33,7 +44,6 @@
   let title;
   let description;
 
-  let userProgress = 0;
 
 
 

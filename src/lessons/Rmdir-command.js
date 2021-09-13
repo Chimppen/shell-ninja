@@ -8,6 +8,8 @@ module.exports = class Rmdir_command extends Lesson{
     constructor(title, description, shell){
         super()
 
+        localStorage.setItem('current_lesson', 'RMDIR Command')
+
         title.innerHTML = `The RMDIR command stands for remove directory. It's used to remove a folder from the current folder. You'd type "rmdir" followed by the folder name you want to remove.`
 
         description.innerHTML = ``

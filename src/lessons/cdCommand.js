@@ -7,6 +7,9 @@ const Mkdir_command = require('./Mkdir-command')
 
 module.exports = class Cd_command extends Lesson{
     constructor(title, description, shell){
+
+        localStorage.setItem('current_lesson', 'CD command.')
+        
         super()
         shell.runCommand('clear')
         title.innerHTML = `The CD command let's you change your location in the filesystem. Go ahead and type "cd" followed by the name of the folder you want to change to.`

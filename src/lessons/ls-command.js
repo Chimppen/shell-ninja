@@ -7,6 +7,8 @@ module.exports = class Ls_command extends Lesson{
     constructor(title, description, shell){
         super()
         
+        localStorage.setItem('current_lesson', 'LS command.')
+
         title.innerHTML = `The <span class="font-bold">LS</span> command simply lists all the items in the current folder. `
 
         description.innerHTML = ``

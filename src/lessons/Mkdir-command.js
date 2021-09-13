@@ -9,6 +9,8 @@ module.exports = class Mkdir_command extends Lesson{
     constructor(title, description, shell){
         super()
 
+        localStorage.setItem('current_lesson', 'MKDIR Command')
+
         title.innerHTML = `The MKDIR command stands for make directory. It is used to create a new folder inside the current folder. You'd type "mkdir" followed by the name of the folder. `
         description.innerHTML = ``
 

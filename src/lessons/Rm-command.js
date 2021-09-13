@@ -7,6 +7,9 @@ const End = require('./End')
 module.exports = class Rm_command  extends Lesson{
     constructor(title, description, shell){
         super()
+
+        localStorage.setItem('current_lesson', 'Rm Command')
+
         shell.runCommand('touch', 'example.txt')
         shell.clear()
 

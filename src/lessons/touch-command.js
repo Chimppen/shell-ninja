@@ -8,6 +8,8 @@ module.exports = class Touch extends Lesson{
     constructor(title, description, shell){
         super()
 
+        localStorage.setItem('current_lesson', 'Touch Command')
+
         title.innerHTML =`The Touch command creates a new file in the current folder. To use it, you'd type "touch" followed by the name of the file you want to create.`
         description.innerHTML = `⚠ This command may be different in other CLIs, i.e Powershell.`
 
