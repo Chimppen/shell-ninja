@@ -2,6 +2,7 @@ module.exports = {
   mode:'jit',
   purge: [
       './src/**/*.html',
+      './public/*.html',
       './src/**/*.js',
       './src/**/*.svelte'
   ],
