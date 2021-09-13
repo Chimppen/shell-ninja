@@ -110,15 +110,24 @@
   </div>
 </div>
 
-<div class="absolute flex justify-between items-center px-10 py-5 w-full ">
+<div class="absolute flex justify-between items-center px-5 md:px-10 py-5 w-full ">
   <div>
-    <img src="/logo.svg" alt="" class="max-w-[150px]" />
+    <img src="/logo.svg" alt="" class="max-w-[100px] md:max-w-[150px]" />
   </div>
   <div>
-    <button on:click={view_tutorial_menu} class="px-5 py-3 bg-gray-600 hover:bg-gray-700 text-gray-50 font-bold rounded-lg">
-      <img class="inline" src="/lessons.svg" alt="lesson collection">
-      Lessons
-    </button>
+    <div class="">
+      {#if localStorage.getItem('current_lesson') != undefined}
+        <button class="p-2 bg-gray-100 rounded"
+        on:click="{()=>{
+          localStorage.removeItem('current_lesson')
+          window.location.reload()
+        } }">Start Over</button>
+     {/if}
+      <button on:click={view_tutorial_menu} class="p-2 md:p-3 bg-gray-600 hover:bg-gray-700 text-gray-50 font-bold rounded-lg">
+        <img class="inline" src="/lessons.svg" alt="lesson collection">
+        Lessons
+      </button>
+    </div>
   </div>
 </div>
 <div class="flex flex-col md:flex-row flex-wrap min-h-screen">
