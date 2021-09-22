@@ -45,7 +45,7 @@
   let description;
 
 
-
+let siteTitleTag
 
  
   let shell_header = `<div class="bash-mirror-header flex items-center">
@@ -72,10 +72,15 @@
       shell.clear();
 
       new lesson(title, description, shell);
+      siteTitleTag = title.innerHTML
     }, 300);
   }
   newLesson(lesson)
 </script>
+
+<svelte:head>
+  <title>{siteTitleTag}</title>
+</svelte:head>
 
 <!--Tutorial Menu-->
 <div
