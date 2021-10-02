@@ -1,9 +1,8 @@
-const checkAnswer = require('../utilities/checkAnswer')
+import fromBottom from '../utilities/animations/from-bottom'
 
-
-module.exports = class Lesson{
+export default class Lesson{
     constructor(title, description, shell){
-        
+        fromBottom()
     }
 
     
