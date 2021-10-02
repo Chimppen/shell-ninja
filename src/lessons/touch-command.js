@@ -1,10 +1,10 @@
-const Lesson = require("./Lesson");
-const _  = require('lodash');
-const checkAnswer = require("../utilities/checkAnswer");
-const Rm_command = require("./Rm-command");
+import Lesson from"./Lesson";
+import _  from'lodash';
+import checkAnswer from"../utilities/checkAnswer";
+import Rm_command from"./Rm-command";
 
 
-module.exports = class Touch extends Lesson{
+export default class Touch extends Lesson{
     constructor(title, description, shell){
         super()
 

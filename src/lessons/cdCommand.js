@@ -1,11 +1,11 @@
-const checkAnswer = require('../utilities/checkAnswer')
-const _ = require('lodash')
-const Lesson = require('./Lesson')
-const Mkdir_command = require('./Mkdir-command')
+import checkAnswer from'../utilities/checkAnswer'
+import _ from'lodash'
+import Lesson from'./Lesson'
+import Mkdir_command from'./Mkdir-command'
 
 
 
-module.exports = class Cd_command extends Lesson{
+export default class Cd_command extends Lesson{
     constructor(title, description, shell){
 
         localStorage.setItem('current_lesson', 'CD command.')

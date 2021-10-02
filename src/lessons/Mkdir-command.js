@@ -1,11 +1,11 @@
-const checkAnswer = require("../utilities/checkAnswer");
-const _ = require('lodash')
-const Lesson = require("./Lesson");
-const Rmdir_command = require("./Rmdir-command");
+import checkAnswer from"../utilities/checkAnswer";
+import _ from'lodash'
+import Lesson from"./Lesson";
+import Rmdir_command from"./Rmdir-command";
 
 
 
-module.exports = class Mkdir_command extends Lesson{
+export default class Mkdir_command extends Lesson{
     constructor(title, description, shell){
         super()
 

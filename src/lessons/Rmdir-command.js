@@ -1,10 +1,10 @@
 
-const checkAnswer = require('../utilities/checkAnswer')
-const _ =  require('lodash')
-const Lesson = require('./Lesson')
-const Touch = require('./touch-command')
+import checkAnswer from'../utilities/checkAnswer'
+import _ from'lodash'
+import Lesson from'./Lesson'
+import Touch from'./touch-command'
 
-module.exports = class Rmdir_command extends Lesson{
+export default class Rmdir_command extends Lesson{
     constructor(title, description, shell){
         super()
 

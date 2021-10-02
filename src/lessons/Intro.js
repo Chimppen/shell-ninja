@@ -1,9 +1,9 @@
-const checkAnswer = require('../utilities/checkAnswer')
-const Lesson = require('./Lesson')
-const Ls_command = require('./ls-command')
+import checkAnswer from'../utilities/checkAnswer'
+import Lesson from'./Lesson'
+import Ls_command from'./ls-command'
 
 
-module.exports = class Intro extends Lesson{
+export default class Intro extends Lesson{
 
     constructor(title, description, shell){
         super()

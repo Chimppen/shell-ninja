@@ -1,9 +1,9 @@
-const checkAnswer = require("../utilities/checkAnswer")
-const Cd_command = require("./cdCommand")
-const Lesson = require('./Lesson')
+import checkAnswer from"../utilities/checkAnswer"
+import Cd_command from"./cdCommand"
+import Lesson from'./Lesson'
 
 
-module.exports = class Ls_command extends Lesson{
+export default class Ls_command extends Lesson{
     constructor(title, description, shell){
         super()
         

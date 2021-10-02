@@ -1,10 +1,10 @@
 
-const Lesson = require('./Lesson')
-const _ = require('lodash')
-const checkAnswer = require('../utilities/checkAnswer')
-const End = require('./End')
+import Lesson from'./Lesson'
+import _ from'lodash'
+import checkAnswer from'../utilities/checkAnswer'
+import End from'./End'
 
-module.exports = class Rm_command  extends Lesson{
+export default class Rm_command  extends Lesson{
     constructor(title, description, shell){
         super()
 

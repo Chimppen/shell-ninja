@@ -1,11 +1,11 @@
-const Ls_command = require("./ls-command");
-const Cd_command = require('./cdCommand');
-const Mkdir_command = require("./Mkdir-command");
-const Rmdir_command = require("./Rmdir-command");
-const Touch = require("./touch-command");
-const Rm_command = require("./Rm-command");
+import Ls_command from"./ls-command";
+import Cd_command from'./cdCommand';
+import Mkdir_command from"./Mkdir-command";
+import Rmdir_command from"./Rmdir-command";
+import Touch from"./touch-command";
+import Rm_command from"./Rm-command";
 
-module.exports = [
+export default [
     {
         title:`LS command.`,
         description:`Learn how to see the contents of the current folder with the ls command.`,

@@ -1,7 +1,7 @@
-const Lesson = require("./Lesson");
+import Lesson from"./Lesson";
 
 
-module.exports = class End extends Lesson{
+export default class End extends Lesson{
     constructor(title, description, shell){
         super()
         title.innerHTML = `That was it, for now.`
