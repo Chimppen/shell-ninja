@@ -2,6 +2,7 @@
   import { Bash } from "@anas2479/bash-mirror";
   import lessons from "../lessons/lessons";
   import LessonLink from "./lesson-link.svelte";
+  import fromBottom from '../utilities/animations/from-bottom'
   import _ from 'lodash'
 
   import Intro from "../lessons/Intro";
@@ -115,7 +116,7 @@ let siteTitleTag
   </div>
 </div>
 
-<div class="absolute flex justify-between items-center px-5 md:px-10 py-5 w-full ">
+<div class="absolute flex justify-between items-center px-5 lg:px-10 py-5 w-full z-40">
   <div>
     <img src="/logo.svg" alt="" class="max-w-[100px] md:max-w-[150px]" />
   </div>
@@ -137,13 +138,13 @@ let siteTitleTag
 </div>
 <div class="flex flex-col md:flex-row flex-wrap min-h-screen">
   <div class=" flex items-center flex-1 min-h-full bg-gray-50">
-    <div class="content p-10 max-w-[600px] mt-24 mb-5">
+    <div class="content p-10 max-w-[600px] mt-24 mb-5 from-bottom">
       <div class="mb-3 flex text-gray-500">Try out what you learn using the shell <div class=" max-w-[30px] mx-1 transform md:-rotate-90">👇</div> </div>
       <h1 bind:this={title} class="text-2xl text-gray-700" />
       <p bind:this={description} class="text-base text-gray-600" />
     </div>
   </div>
-  <div class="flex flex-1 items-center p-10">
+  <div class="flex flex-1 items-center p-10 from-bottom">
     <div
       bind:this={el}
       class="bash-mirror transform md:-translate-x-20 shadow-2xl -translate-y-20 md:translate-y-0 "
