@@ -116,9 +116,9 @@ let siteTitleTag
   </div>
 </div>
 
-<div class="absolute flex justify-between items-center px-5 lg:px-10 py-5 w-full z-40">
+<div class="absolute flex justify-between items-center px-5 lg:px-10 py-5 w-full z-10">
   <div>
-    <img src="/logo.svg" alt="" class="max-w-[100px] md:max-w-[150px]" />
+    <img src="/logo.svg" alt="" class="max-w-[200px]" />
   </div>
   <div>
     <div class="">
